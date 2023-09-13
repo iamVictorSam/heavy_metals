@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/route_manager.dart';
 import 'package:heavy_metals/bottomNavigation.dart';
-import 'package:heavy_metals/presentation/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
