@@ -1,6 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ArticleDetails extends StatelessWidget {
   ArticleDetails({Key? key}) : super(key: key);
 
@@ -27,14 +28,14 @@ class ArticleDetails extends StatelessWidget {
               Row(
                 children: [
                   const CircleAvatar(
-                    radius: 8,
+                    radius: 12,
                   ),
                   const SizedBox(width: 8),
-                  const Text('Mr Fred Asuquo', style: TextStyle(fontSize: 10)),
-                  // SizedBox(width: 8),
-                  const Spacer(),
+                  const Text('Mr Fred Asuquo', style: TextStyle(fontSize: 12)),
+                  const SizedBox(width: 24),
+                  // const Spacer(),
                   Text('Dec 5, 2001',
-                      style: TextStyle(fontSize: 8, color: greyColor)),
+                      style: TextStyle(fontSize: 10, color: greyColor)),
                 ],
               ),
             ],
