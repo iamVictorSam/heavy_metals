@@ -1,3 +1,4 @@
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 class ArticleDetails extends StatelessWidget {
@@ -5,6 +6,15 @@ class ArticleDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        actions: [
+          IconButton(onPressed: () {}, icon: const Icon(EvaIcons.search))
+        ],
+      ),
+      body: const Column(
+        children: [],
+      ),
+    );
   }
 }
