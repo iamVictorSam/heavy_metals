@@ -12,8 +12,19 @@ class ArticleDetails extends StatelessWidget {
           IconButton(onPressed: () {}, icon: const Icon(EvaIcons.search))
         ],
       ),
-      body: const Column(
-        children: [],
+      body: const SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              Text(
+                'Socio-economic Baseline for lead impacted communities in Ogoniland',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(height: 10),
+            ],
+          ),
+        ),
       ),
     );
   }
