@@ -11,22 +11,19 @@ class ArticleCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // width: 300,
       margin: const EdgeInsets.only(bottom: 20),
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       decoration: BoxDecoration(
         color: Colors.white,
-        // shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[300]!, // Light color for top shadow
-            offset:
-                const Offset(-4.0, -4.0), // Adjust the values for your design
+            color: Colors.grey[300]!,
+            offset: const Offset(-4.0, -4.0),
             blurRadius: 7.0,
           ),
           BoxShadow(
-            color: Colors.grey[300]!, // Dark color for bottom shadow
-            offset: const Offset(4.0, 4.0), // Adjust the values for your design
+            color: Colors.grey[300]!,
+            offset: const Offset(4.0, 4.0),
             blurRadius: 7.0,
           ),
         ],
@@ -56,7 +53,7 @@ class ArticleCard extends StatelessWidget {
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
                   ),
-                  maxLines: 3, // Adjust maxLines as needed
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                 ),
                 const SizedBox(height: 5),
