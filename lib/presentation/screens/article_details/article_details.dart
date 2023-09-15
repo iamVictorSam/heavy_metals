@@ -63,7 +63,7 @@ class ArticleDetails extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Text(
-                'socio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
+                'socio-economic Baseline for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
                 style: TextStyle(color: textGrey),
               ),
               const SizedBox(
@@ -74,7 +74,7 @@ class ArticleDetails extends StatelessWidget {
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               Text(
-                'socio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
+                'socio-economic Baseline for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance socio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistancesocio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistancesocio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
                 style: TextStyle(color: textGrey),
               ),
             ],
