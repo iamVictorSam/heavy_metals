@@ -6,6 +6,7 @@ class ArticleDetails extends StatelessWidget {
   ArticleDetails({Key? key}) : super(key: key);
 
   Color greyColor = const Color(0xff84828D);
+  Color textGrey = const Color(0xff111111).withOpacity(0.5);
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,7 @@ class ArticleDetails extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
                 'Socio-economic Baseline for lead impacted communities in Ogoniland',
@@ -54,7 +56,22 @@ class ArticleDetails extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
+              ),
+              const Text(
+                'Abstract',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              ),
+              Text(
+                'socio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
+                style: TextStyle(color: textGrey),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Abstract',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
             ],
           ),
