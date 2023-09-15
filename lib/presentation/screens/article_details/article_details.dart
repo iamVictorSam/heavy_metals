@@ -38,6 +38,21 @@ class ArticleDetails extends StatelessWidget {
                       style: TextStyle(fontSize: 10, color: greyColor)),
                 ],
               ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                height: 200,
+                // width: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  image: const DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                        'https://res.cloudinary.com/iamvictorsam/image/upload/v1675709306/image_d27rcg.png'),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
