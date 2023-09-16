@@ -38,8 +38,9 @@ class ArticleCard extends StatelessWidget {
             Container(
               height: 60,
               width: 80,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(2),
+                image: const DecorationImage(
                   fit: BoxFit.cover,
                   image: NetworkImage(
                       'https://res.cloudinary.com/iamvictorsam/image/upload/v1675709306/image_d27rcg.png'),
