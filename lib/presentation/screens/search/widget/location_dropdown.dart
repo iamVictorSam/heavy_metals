@@ -9,8 +9,8 @@ class LocationDropdown extends StatefulWidget {
 }
 
 class _LocationDropdownState extends State<LocationDropdown> {
-  String? selectedMetal;
-  List<String> metals = ['Lead', 'Mercury', 'Cadmium', 'Arsenic', 'Chromium'];
+  String selectedMetal = "Khana";
+  List<String> metals = ['Khana', 'Gokhana'];
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class _LocationDropdownState extends State<LocationDropdown> {
             value: selectedMetal,
             onChanged: (String? newValue) {
               setState(() {
-                selectedMetal = newValue;
+                selectedMetal = newValue ?? "khana";
               });
             },
             items: metals.map<DropdownMenuItem<String>>((String value) {

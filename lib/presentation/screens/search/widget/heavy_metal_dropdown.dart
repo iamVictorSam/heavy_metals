@@ -9,7 +9,7 @@ class HeavyMetalsDropdown extends StatefulWidget {
 }
 
 class _HeavyMetalsDropdownState extends State<HeavyMetalsDropdown> {
-  String? selectedMetal;
+  String selectedMetal = "Lead";
   List<String> metals = ['Lead', 'Mercury', 'Cadmium', 'Arsenic', 'Chromium'];
 
   @override
@@ -30,7 +30,7 @@ class _HeavyMetalsDropdownState extends State<HeavyMetalsDropdown> {
             value: selectedMetal,
             onChanged: (String? newValue) {
               setState(() {
-                selectedMetal = newValue;
+                selectedMetal = newValue ?? "Lead";
               });
             },
             items: metals.map<DropdownMenuItem<String>>((String value) {
