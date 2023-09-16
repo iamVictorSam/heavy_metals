@@ -4,7 +4,9 @@ import 'package:heavy_metals/presentation/screens/home.dart';
 import 'package:heavy_metals/presentation/screens/search/search.dart';
 
 class MyNavigationBar extends StatefulWidget {
-  const MyNavigationBar({Key? key}) : super(key: key);
+  const MyNavigationBar({Key? key, this.index = 0}) : super(key: key);
+
+  final int index;
 
   @override
   _MyNavigationBarState createState() => _MyNavigationBarState();
