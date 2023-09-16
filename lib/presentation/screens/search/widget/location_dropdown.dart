@@ -28,6 +28,7 @@ class _LocationDropdownState extends State<LocationDropdown> {
             isExpanded: true,
             underline: Container(),
             value: selectedMetal,
+            // dropdownColor: Colors.grey,
             onChanged: (String? newValue) {
               setState(() {
                 selectedMetal = newValue ?? "khana";
@@ -40,7 +41,9 @@ class _LocationDropdownState extends State<LocationDropdown> {
                   children: [
                     const Icon(Icons.location_on, color: kPrimaryColor),
                     const SizedBox(width: 8),
-                    Text(value),
+                    Text(
+                      value,
+                    ),
                   ],
                 ),
               );
