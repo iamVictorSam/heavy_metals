@@ -1,5 +1,7 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:get/route_manager.dart';
+import 'package:heavy_metals/presentation/screens/search/search.dart';
 
 // ignore: must_be_immutable
 class ArticleDetails extends StatelessWidget {
@@ -13,7 +15,11 @@ class ArticleDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(EvaIcons.search))
+          IconButton(
+              onPressed: () {
+                Get.off(() => const SearchScreen());
+              },
+              icon: const Icon(EvaIcons.search))
         ],
       ),
       body: SingleChildScrollView(
