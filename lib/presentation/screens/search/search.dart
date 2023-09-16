@@ -16,9 +16,6 @@ class SearchScreen extends StatelessWidget {
         body: Column(
           children: [
             ListTile(
-              leading: const Icon(
-                Icons.arrow_back_ios_new_rounded,
-              ),
               title: TextField(
                 decoration: InputDecoration(
                   hintText: 'Search location',
