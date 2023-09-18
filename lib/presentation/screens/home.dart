@@ -19,14 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   // final HomeController _homeController = Get.put(HomeController());
 
   @override
-  void initState() {
-    super.initState();
-    // fetchData();
-
-    // _homeController
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(

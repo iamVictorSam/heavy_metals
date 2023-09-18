@@ -47,7 +47,7 @@ class SearchScreen extends StatelessWidget {
               ...List.generate(
                   _homeController.metals.length,
                   (index) => ListTile(
-                        title: Text(_homeController.metals[index].cd),
+                        title: Text(_homeController.metals[index].gokana),
                       )),
               const HeavyMetalsDropdown(),
               const SizedBox(
