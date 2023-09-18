@@ -13,7 +13,6 @@ class HomeController extends GetxController {
   }
 
   void fetchMetals() async {
-    // refreshTimer?.cancel();
     isLoading(true);
     try {
       var metalResult = await NetworkCall().fetchMetalsData();
