@@ -1,10 +1,9 @@
-import 'dart:convert';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
 import 'package:heavy_metals/Getx/HomeCtx.dart';
-import 'package:http/http.dart' as http;
+import 'package:heavy_metals/models/model.dart';
 import 'package:latlong2/latlong.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,22 +16,74 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final greyColor = const Color(0xffAAAAAA);
   // final HomeController _homeController = Get.put(HomeController());
+  // final HomeController _homeController = Get.put(HomeController());
+  late final customMarkers = <Marker>[
+    buildPin(const LatLng(4.7166638, 7.2999988),
+        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+    buildPin(const LatLng(4.7994, 7.1198),
+        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+    buildPin(const LatLng(4.66049, 7.28347),
+        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+    buildPin(const LatLng(4.69962, 7.42264),
+        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+  ];
+
+  Marker buildPin(LatLng point,
+          {required String cd,
+          required String pb,
+          required String ni,
+          required String hg,
+          required String cr,
+          required String zn}) =>
+      Marker(
+        point: point,
+        width: 60,
+        height: 60,
+        builder: (BuildContext context) {
+          return Tooltip(
+            onTriggered: () {
+              print('object');
+            },
+            triggerMode: TooltipTriggerMode.tap,
+            richMessage: TextSpan(
+              text: '',
+              children: [
+                TextSpan(text: '\ncd: $cd'),
+                TextSpan(text: '\npb: $pb'),
+                TextSpan(text: '\nni: $ni'),
+                TextSpan(text: '\nhg: $hg'),
+                TextSpan(text: '\ncr: $cr'),
+                TextSpan(text: '\nzn: $zn'),
+              ],
+            ),
+            child:
+                const Icon(Icons.location_pin, size: 60, color: Colors.black),
+          );
+        },
+      );
 
   @override
   Widget build(BuildContext context) {
+    // Get the metal data from the controller
+
     return Scaffold(
       body: Stack(
         children: [
           FlutterMap(
             options: MapOptions(
-              center: const LatLng(51.509364, -0.128928),
-              zoom: 9.2,
+              center: const LatLng(4.7339, 7.2300),
+              zoom: 10.3,
             ),
             nonRotatedChildren: const [],
             children: [
               TileLayer(
                 urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                 userAgentPackageName: 'com.example.app',
+              ),
+              MarkerLayer(
+                markers: customMarkers,
+                // rotate: counterRotate,
+                // alignment: selectedAlignment,
               ),
             ],
           ),

@@ -35,7 +35,7 @@ class MetalsModel {
   });
 
   factory MetalsModel.fromJson(Map<String, dynamic> json) => MetalsModel(
-        text: json["text  "],
+        text: json["text"],
         cd: json["Cd"],
         pb: json["Pb"],
         ni: json["Ni"],

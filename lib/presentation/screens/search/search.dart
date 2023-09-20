@@ -44,11 +44,11 @@ class SearchScreen extends StatelessWidget {
               const SizedBox(
                 height: 70,
               ),
-              ...List.generate(
-                  _homeController.metals.length,
-                  (index) => ListTile(
-                        title: Text(_homeController.metals[index].gokana),
-                      )),
+              // ...List.generate(
+              //     _homeController.metals.length,
+              //     (index) => ListTile(
+              //           title: Text(_homeController.metals[index].khana),
+              //         )),
               const HeavyMetalsDropdown(),
               const SizedBox(
                 height: 30,
