@@ -41,9 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
         height: 60,
         builder: (BuildContext context) {
           return Tooltip(
-            onTriggered: () {
-              print('object');
-            },
             triggerMode: TooltipTriggerMode.tap,
             richMessage: TextSpan(
               text: '',
