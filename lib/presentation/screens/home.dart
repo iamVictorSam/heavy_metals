@@ -80,38 +80,38 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ],
           ),
-          Positioned(
-            top: 80,
-            left: 10,
-            right: 10,
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: ListTile(
-                leading: Icon(
-                  EvaIcons.search,
-                  color: greyColor,
-                ),
-                title: const TextField(
-                  decoration: InputDecoration(
-                    enabled: false,
-                    hintText: 'Search location or meta',
-                    border: InputBorder.none,
-                  ),
-                ),
-                trailing: GestureDetector(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.close,
-                    size: 18,
-                    color: greyColor,
-                  ),
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   top: 80,
+          //   left: 10,
+          //   right: 10,
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       color: Colors.white,
+          //       borderRadius: BorderRadius.circular(10),
+          //     ),
+          //     child: ListTile(
+          //       leading: Icon(
+          //         EvaIcons.search,
+          //         color: greyColor,
+          //       ),
+          //       title: const TextField(
+          //         decoration: InputDecoration(
+          //           enabled: false,
+          //           hintText: 'Search location or meta',
+          //           border: InputBorder.none,
+          //         ),
+          //       ),
+          //       trailing: GestureDetector(
+          //         onTap: () {},
+          //         child: Icon(
+          //           Icons.close,
+          //           size: 18,
+          //           color: greyColor,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
