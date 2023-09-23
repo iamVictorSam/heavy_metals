@@ -61,8 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Get the metal data from the controller
-
     return Scaffold(
       body: Stack(
         children: [
