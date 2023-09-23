@@ -16,7 +16,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final greyColor = const Color(0xffAAAAAA);
   // final HomeController _homeController = Get.put(HomeController());
-  // final HomeController _homeController = Get.put(HomeController());
+  final HomeController _homeController = Get.put(HomeController());
+
   late final customMarkers = <Marker>[
     buildPin(const LatLng(4.7166638, 7.2999988),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
