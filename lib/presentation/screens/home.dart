@@ -77,8 +77,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               MarkerLayer(
                 markers: customMarkers,
-                // rotate: counterRotate,
-                // alignment: selectedAlignment,
               ),
             ],
           ),
