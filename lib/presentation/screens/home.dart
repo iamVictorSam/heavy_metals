@@ -18,13 +18,17 @@ class _HomeScreenState extends State<HomeScreen> {
   final HomeController _homeController = Get.put(HomeController());
 
   late final customMarkers = <Marker>[
-    buildPin(const LatLng(4.7166638, 7.2999988),
+    // tai
+    buildPin(const LatLng(4.7518, 7.2437),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+    // eleme
     buildPin(const LatLng(4.7994, 7.1198),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
-    buildPin(const LatLng(4.66049, 7.28347),
+    // khana
+    buildPin(const LatLng(4.6476, 7.3949),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
-    buildPin(const LatLng(4.69962, 7.42264),
+    // gokana
+    buildPin(const LatLng(4.6692, 7.2869),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
   ];
 
