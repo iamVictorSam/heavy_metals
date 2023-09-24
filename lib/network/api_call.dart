@@ -9,9 +9,9 @@ class NetworkCall {
         .get(Uri.parse('https://toxmet.xyz/api/soil-test'));
 
     if (response.statusCode == 200) {
-      print(json.decode(response.body));
+      // print(json.decode(response.body));
       List<dynamic> data = json.decode(response.body);
-      print(data);
+      // print(data);
       List<MetalsModel> metalsList =
           data.map((json) => MetalsModel.fromJson(json)).toList();
       return metalsList;
