@@ -9,8 +9,8 @@ import 'package:heavy_metals/presentation/screens/search/widget/location_dropdow
 import 'package:heavy_metals/presentation/widgets/def_btn.dart';
 
 class SearchScreen extends StatelessWidget {
-  SearchScreen({super.key});
-  final HomeController _homeController = Get.put(HomeController());
+  const SearchScreen({super.key});
+  // final HomeController _homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
