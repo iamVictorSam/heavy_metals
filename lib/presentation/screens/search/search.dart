@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
-import 'package:heavy_metals/Getx/HomeCtx.dart';
 import 'package:heavy_metals/constant.dart';
 import 'package:heavy_metals/presentation/screens/articlesList/articlesList.dart';
 import 'package:heavy_metals/presentation/screens/search/widget/heavy_metal_dropdown.dart';
