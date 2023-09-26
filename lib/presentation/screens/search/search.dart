@@ -10,7 +10,6 @@ import 'package:heavy_metals/presentation/widgets/def_btn.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
-  // final HomeController _homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
