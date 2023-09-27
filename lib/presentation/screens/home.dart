@@ -22,8 +22,8 @@ class _HomeScreenState extends State<HomeScreen> {
         pb: _homeController.metals[4].pb,
         ni: _homeController.metals[4].ni,
         cr: _homeController.metals[4].cr,
-        hg: '38',
-        zn: '60'),
+        hg: _homeController.metals[4].hg,
+        zn: _homeController.metals[4].zn),
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
