@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
         cd: _homeController.metals[4].cd,
         pb: _homeController.metals[4].pb,
         ni: _homeController.metals[4].ni,
-        cr: '68',
+        cr: _homeController.metals[4].cr,
         hg: '38',
         zn: '60'),
     // eleme
