@@ -18,7 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
   late final customMarkers = <Marker>[
     // tai
     buildPin(const LatLng(4.7518, 7.2437),
-        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+        cd: _homeController.metals[3].cd,
+        pb: _homeController.metals[3].pb,
+        ni: _homeController.metals[3].ni,
+        cr: _homeController.metals[3].cr,
+        hg: _homeController.metals[3].hg,
+        zn: _homeController.metals[3].zn),
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
