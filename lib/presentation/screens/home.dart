@@ -68,8 +68,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Calculate the total
-
     return Obx(
       () => _homeController.isLoading.value
           ? const Center(
