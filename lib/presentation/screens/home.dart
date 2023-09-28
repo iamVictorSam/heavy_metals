@@ -18,12 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late final customMarkers = <Marker>[
     // tai
     buildPin(const LatLng(4.7518, 7.2437),
-        cd: _homeController.metals[4].cd,
-        pb: _homeController.metals[4].pb,
-        ni: _homeController.metals[4].ni,
-        cr: _homeController.metals[4].cr,
-        hg: _homeController.metals[4].hg,
-        zn: _homeController.metals[4].zn),
+        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
         cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
@@ -47,21 +42,23 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 60,
         height: 60,
         builder: (BuildContext context) {
-          return Tooltip(
-            triggerMode: TooltipTriggerMode.tap,
-            richMessage: TextSpan(
-              text: '',
-              children: [
-                TextSpan(text: '\ncd: $cd'),
-                TextSpan(text: '\npb: $pb'),
-                TextSpan(text: '\nni: $ni'),
-                TextSpan(text: '\nhg: $hg'),
-                TextSpan(text: '\ncr: $cr'),
-                TextSpan(text: '\nzn: $zn'),
-              ],
+          return Obx(
+            () => Tooltip(
+              triggerMode: TooltipTriggerMode.tap,
+              richMessage: TextSpan(
+                text: '',
+                children: [
+                  TextSpan(text: '\ncd: ${_homeController.metals[4].cd}'),
+                  TextSpan(text: '\npb: $pb'),
+                  TextSpan(text: '\nni: $ni'),
+                  TextSpan(text: '\nhg: $hg'),
+                  TextSpan(text: '\ncr: $cr'),
+                  TextSpan(text: '\nzn: $zn'),
+                ],
+              ),
+              child:
+                  const Icon(Icons.location_pin, size: 60, color: Colors.black),
             ),
-            child:
-                const Icon(Icons.location_pin, size: 60, color: Colors.black),
           );
         },
       );
