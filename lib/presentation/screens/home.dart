@@ -26,13 +26,28 @@ class _HomeScreenState extends State<HomeScreen> {
         zn: _homeController.metals[3].zn),
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
-        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+        cd: _homeController.metals[0].cd,
+        pb: _homeController.metals[0].pb,
+        ni: _homeController.metals[0].ni,
+        cr: _homeController.metals[0].cr,
+        hg: _homeController.metals[0].hg,
+        zn: _homeController.metals[0].zn),
     // khana
     buildPin(const LatLng(4.6476, 7.3949),
-        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+        cd: _homeController.metals[1].cd,
+        pb: _homeController.metals[1].pb,
+        ni: _homeController.metals[1].ni,
+        cr: _homeController.metals[1].cr,
+        hg: _homeController.metals[1].hg,
+        zn: _homeController.metals[1].zn),
     // gokana
     buildPin(const LatLng(4.6692, 7.2869),
-        cd: '49', pb: '53', ni: '43', cr: '68', hg: '38', zn: '60'),
+        cd: _homeController.metals[2].cd,
+        pb: _homeController.metals[2].pb,
+        ni: _homeController.metals[2].ni,
+        cr: _homeController.metals[2].cr,
+        hg: _homeController.metals[2].hg,
+        zn: _homeController.metals[2].zn),
   ];
 
   Marker buildPin(LatLng point,
