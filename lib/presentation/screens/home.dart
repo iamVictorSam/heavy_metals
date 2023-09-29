@@ -47,23 +47,21 @@ class _HomeScreenState extends State<HomeScreen> {
         width: 60,
         height: 60,
         builder: (BuildContext context) {
-          return Obx(
-            () => Tooltip(
-              triggerMode: TooltipTriggerMode.tap,
-              richMessage: TextSpan(
-                text: '',
-                children: [
-                  TextSpan(text: '\ncd: ${_homeController.metals[4].cd}'),
-                  TextSpan(text: '\npb: $pb'),
-                  TextSpan(text: '\nni: $ni'),
-                  TextSpan(text: '\nhg: $hg'),
-                  TextSpan(text: '\ncr: $cr'),
-                  TextSpan(text: '\nzn: $zn'),
-                ],
-              ),
-              child:
-                  const Icon(Icons.location_pin, size: 60, color: Colors.black),
+          return Tooltip(
+            triggerMode: TooltipTriggerMode.tap,
+            richMessage: TextSpan(
+              text: '',
+              children: [
+                TextSpan(text: '\ncd: $cd'),
+                TextSpan(text: '\npb: $pb'),
+                TextSpan(text: '\nni: $ni'),
+                TextSpan(text: '\nhg: $hg'),
+                TextSpan(text: '\ncr: $cr'),
+                TextSpan(text: '\nzn: $zn'),
+              ],
             ),
+            child:
+                const Icon(Icons.location_pin, size: 60, color: Colors.black),
           );
         },
       );
