@@ -16,7 +16,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    SearchScreen(),
+    const SearchScreen(),
     const Text('Profile Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
@@ -45,11 +45,11 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             ),
             BottomNavigationBarItem(
               icon: Icon(
-                Icons.search,
+                Icons.add_chart_rounded,
                 // color: kPrimaryColor,
                 size: 25,
               ),
-              label: 'Search',
+              label: 'Demograph',
             ),
             BottomNavigationBarItem(
               icon: Icon(
