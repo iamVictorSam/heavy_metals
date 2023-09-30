@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
-import 'package:heavy_metals/bottomNavigation.dart';
 import 'package:heavy_metals/splash_screen.dart';
 
 void main() {
