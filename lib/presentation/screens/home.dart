@@ -51,35 +51,51 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   Marker buildPin(LatLng point,
-          {required String cd,
-          required String pb,
-          required String ni,
-          required String hg,
-          required String cr,
-          required String zn}) =>
-      Marker(
-        point: point,
-        width: 60,
-        height: 60,
-        builder: (BuildContext context) {
-          return Tooltip(
-            triggerMode: TooltipTriggerMode.tap,
-            richMessage: TextSpan(
-              text: '',
-              children: [
-                TextSpan(text: '\ncd: $cd'),
-                TextSpan(text: '\npb: $pb'),
-                TextSpan(text: '\nni: $ni'),
-                TextSpan(text: '\nhg: $hg'),
-                TextSpan(text: '\ncr: $cr'),
-                TextSpan(text: '\nzn: $zn'),
-              ],
-            ),
-            child:
-                const Icon(Icons.location_pin, size: 60, color: Colors.black),
-          );
-        },
-      );
+      {required String cd,
+      required String pb,
+      required String ni,
+      required String hg,
+      required String cr,
+      required String zn}) {
+    // Calculate the total for all metals at this location
+    double total = double.parse(cd) +
+        double.parse(pb) +
+        double.parse(ni) +
+        double.parse(hg) +
+        double.parse(cr) +
+        double.parse(zn);
+
+    // Calculate the percentage for each metal
+    double cdPercentage = (double.parse(cd) / total) * 100;
+    double pbPercentage = (double.parse(pb) / total) * 100;
+    double niPercentage = (double.parse(ni) / total) * 100;
+    double hgPercentage = (double.parse(hg) / total) * 100;
+    double crPercentage = (double.parse(cr) / total) * 100;
+    double znPercentage = (double.parse(zn) / total) * 100;
+
+    return Marker(
+      point: point,
+      width: 60,
+      height: 60,
+      builder: (BuildContext context) {
+        return Tooltip(
+          triggerMode: TooltipTriggerMode.tap,
+          richMessage: TextSpan(
+            text: '',
+            children: [
+              TextSpan(text: '\ncd: ${cdPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\npb: ${pbPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nni: ${niPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nhg: ${hgPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\ncr: ${crPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nzn: ${znPercentage.toStringAsFixed(2)}%'),
+            ],
+          ),
+          child: const Icon(Icons.location_pin, size: 60, color: Colors.black),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
