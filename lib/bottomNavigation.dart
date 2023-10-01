@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:heavy_metals/constant.dart';
 import 'package:heavy_metals/presentation/screens/demography/demography.dart';
 import 'package:heavy_metals/presentation/screens/home.dart';
-import 'package:heavy_metals/presentation/screens/search/search.dart';
 
 class MyNavigationBar extends StatefulWidget {
   const MyNavigationBar({Key? key, this.index = 0}) : super(key: key);
