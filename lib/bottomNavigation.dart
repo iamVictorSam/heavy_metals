@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heavy_metals/constant.dart';
+import 'package:heavy_metals/presentation/screens/demography/demography.dart';
 import 'package:heavy_metals/presentation/screens/home.dart';
 import 'package:heavy_metals/presentation/screens/search/search.dart';
 
@@ -16,7 +17,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   int _selectedIndex = 0;
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
-    const SearchScreen(),
+    const DemographyScreen(),
     const Text('Profile Page',
         style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
   ];
@@ -49,7 +50,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
                 // color: kPrimaryColor,
                 size: 25,
               ),
-              label: 'Demograph',
+              label: 'Demography',
             ),
             BottomNavigationBarItem(
               icon: Icon(
