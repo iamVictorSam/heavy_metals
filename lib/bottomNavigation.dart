@@ -65,7 +65,6 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
           selectedItemColor: kPrimaryColor,
           unselectedItemColor: kGrey,
           showUnselectedLabels: true,
-          // unselectedLabelStyle: const TextStyle(color: kGrey),
           iconSize: 40,
           onTap: _onItemTapped,
           elevation: 5),
