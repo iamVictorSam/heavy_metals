@@ -39,7 +39,6 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
               icon: Icon(
                 Icons.home,
                 size: 25,
-                // color: kPrimaryColor,
               ),
               label: 'Home',
             ),
