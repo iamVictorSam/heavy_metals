@@ -45,7 +45,6 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.add_chart_rounded,
-                // color: kPrimaryColor,
                 size: 25,
               ),
               label: 'Demography',
