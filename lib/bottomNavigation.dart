@@ -52,7 +52,6 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
             BottomNavigationBarItem(
               icon: Icon(
                 Icons.info_outline,
-                // color: kPrimaryColor,
                 size: 25,
               ),
               label: 'About',
