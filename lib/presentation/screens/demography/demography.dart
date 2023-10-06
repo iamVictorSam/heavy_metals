@@ -7,7 +7,9 @@ class DemographyScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SingleChildScrollView(
-        child: Column(),
+        child: Column(
+          children: [],
+        ),
       ),
     );
   }
