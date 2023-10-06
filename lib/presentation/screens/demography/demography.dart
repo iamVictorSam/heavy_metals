@@ -5,8 +5,10 @@ class DemographyScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: ,
+    return const Scaffold(
+      body: SingleChildScrollView(
+        child: Column(),
+      ),
     );
   }
 }
