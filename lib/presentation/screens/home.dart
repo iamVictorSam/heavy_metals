@@ -18,6 +18,7 @@ class _HomeScreenState extends State<HomeScreen> {
   late final customMarkers = <Marker>[
     // tai
     buildPin(const LatLng(4.7518, 7.2437),
+        town: _homeController.metals[3].text,
         cd: _homeController.metals[3].cd,
         pb: _homeController.metals[3].pb,
         ni: _homeController.metals[3].ni,
@@ -27,6 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
         cd: _homeController.metals[0].cd,
+        town: _homeController.metals[0].text,
         pb: _homeController.metals[0].pb,
         ni: _homeController.metals[0].ni,
         cr: _homeController.metals[0].cr,
@@ -34,24 +36,27 @@ class _HomeScreenState extends State<HomeScreen> {
         zn: _homeController.metals[0].zn),
     // khana
     buildPin(const LatLng(4.6476, 7.3949),
-        cd: _homeController.metals[1].cd,
-        pb: _homeController.metals[1].pb,
-        ni: _homeController.metals[1].ni,
-        cr: _homeController.metals[1].cr,
-        hg: _homeController.metals[1].hg,
-        zn: _homeController.metals[1].zn),
-    // gokana
-    buildPin(const LatLng(4.6692, 7.2869),
+        town: _homeController.metals[2].text,
         cd: _homeController.metals[2].cd,
         pb: _homeController.metals[2].pb,
         ni: _homeController.metals[2].ni,
         cr: _homeController.metals[2].cr,
         hg: _homeController.metals[2].hg,
         zn: _homeController.metals[2].zn),
+    // gokana
+    buildPin(const LatLng(4.6692, 7.2869),
+        cd: _homeController.metals[1].cd,
+        town: _homeController.metals[1].text,
+        pb: _homeController.metals[1].pb,
+        ni: _homeController.metals[1].ni,
+        cr: _homeController.metals[1].cr,
+        hg: _homeController.metals[1].hg,
+        zn: _homeController.metals[1].zn),
   ];
 
   Marker buildPin(LatLng point,
       {required String cd,
+      required String town,
       required String pb,
       required String ni,
       required String hg,
@@ -81,14 +86,14 @@ class _HomeScreenState extends State<HomeScreen> {
         return Tooltip(
           triggerMode: TooltipTriggerMode.tap,
           richMessage: TextSpan(
-            text: '',
+            text: town,
             children: [
-              TextSpan(text: '\ncd: ${cdPercentage.toStringAsFixed(2)}%'),
-              TextSpan(text: '\npb: ${pbPercentage.toStringAsFixed(2)}%'),
-              TextSpan(text: '\nni: ${niPercentage.toStringAsFixed(2)}%'),
-              TextSpan(text: '\nhg: ${hgPercentage.toStringAsFixed(2)}%'),
-              TextSpan(text: '\ncr: ${crPercentage.toStringAsFixed(2)}%'),
-              TextSpan(text: '\nzn: ${znPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nCd: ${cdPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nPb: ${pbPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nNi: ${niPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nHg: ${hgPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nCr: ${crPercentage.toStringAsFixed(2)}%'),
+              TextSpan(text: '\nZn: ${znPercentage.toStringAsFixed(2)}%'),
             ],
           ),
           child: const Icon(Icons.location_pin, size: 60, color: Colors.black),
