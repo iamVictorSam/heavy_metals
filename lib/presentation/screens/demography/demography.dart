@@ -13,12 +13,6 @@ class DemographyScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              // SfCircularChart(
-              //   key: GlobalKey(),
-              //   title: ChartTitle(text: 'Khana'),
-              //   series: _getRadialBarDefaultSeries(),
-              //   // tooltipBehavior: _tooltipBehavior,
-              // ),
               SfCircularChart(
                 title: ChartTitle(
                     text: 'Various countries population density and area'),
@@ -59,45 +53,6 @@ class DemographyScreen extends StatelessWidget {
           pointRadiusMapper: (ChartSampleData data, _) => data.text,
           dataLabelSettings: const DataLabelSettings(
               isVisible: true, labelPosition: ChartDataLabelPosition.outside))
-    ];
-  }
-
-  List<RadialBarSeries<ChartSampleData, String>> _getRadialBarDefaultSeries() {
-    return <RadialBarSeries<ChartSampleData, String>>[
-      RadialBarSeries<ChartSampleData, String>(
-          maximumValue: 15,
-          dataLabelSettings: const DataLabelSettings(
-              isVisible: true, textStyle: TextStyle(fontSize: 10.0)),
-          dataSource: <ChartSampleData>[
-            ChartSampleData(
-                x: 'John',
-                y: 10,
-                text: '100%',
-                pointColor: const Color.fromRGBO(248, 177, 149, 1.0)),
-            ChartSampleData(
-                x: 'Almaida',
-                y: 11,
-                text: '100%',
-                pointColor: const Color.fromRGBO(246, 114, 128, 1.0)),
-            ChartSampleData(
-                x: 'Don',
-                y: 12,
-                text: '100%',
-                pointColor: const Color.fromRGBO(61, 205, 171, 1.0)),
-            ChartSampleData(
-                x: 'Tom',
-                y: 13,
-                text: '100%',
-                pointColor: const Color.fromRGBO(1, 174, 190, 1.0)),
-          ],
-          cornerStyle: CornerStyle.bothCurve,
-          gap: '10%',
-          radius: '90%',
-          xValueMapper: (ChartSampleData data, _) => data.x,
-          yValueMapper: (ChartSampleData data, _) => data.y,
-          pointRadiusMapper: (ChartSampleData data, _) => data.text,
-          pointColorMapper: (ChartSampleData data, _) => data.pointColor,
-          dataLabelMapper: (ChartSampleData data, _) => data.x)
     ];
   }
 }
