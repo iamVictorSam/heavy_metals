@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:heavy_metals/Getx/HomeCtx.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
 class DemographyScreen extends StatelessWidget {
-  const DemographyScreen({super.key});
+  DemographyScreen({super.key});
+  final HomeController _homeController = Get.put(HomeController());
 
   @override
   Widget build(BuildContext context) {
@@ -13,18 +16,15 @@ class DemographyScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              SfCircularChart(
-                title: ChartTitle(
-                    text: 'Various countries population density and area'),
-                legend: const Legend(overflowMode: LegendItemOverflowMode.wrap),
-                series: _getRadiusPieSeries(),
-                // onTooltipRender: (TooltipArgs args) {
-                //   final NumberFormat format = NumberFormat.decimalPattern();
-                //   args.text = args.dataPoints![args.pointIndex!.toInt()].x.toString() +
-                //       ' : ' +
-                //       format.format(args.dataPoints![args.pointIndex!.toInt()].y);
-                // },
-                tooltipBehavior: TooltipBehavior(enable: true),
+              ...List.generate(
+                _homeController.metals.length,
+                (index) => SfCircularChart(
+                  title: ChartTitle(text: _homeController.metals[index].text),
+                  legend:
+                      const Legend(overflowMode: LegendItemOverflowMode.wrap),
+                  series: _getRadiusPieSeries(_homeController.metals[index]),
+                  tooltipBehavior: TooltipBehavior(enable: true),
+                ),
               ),
             ],
           ),
@@ -33,7 +33,8 @@ class DemographyScreen extends StatelessWidget {
     );
   }
 
-  List<PieSeries<ChartSampleData, String>> _getRadiusPieSeries() {
+  List<PieSeries<ChartSampleData, String>> _getRadiusPieSeries(element) {
+    print(element);
     return <PieSeries<ChartSampleData, String>>[
       PieSeries<ChartSampleData, String>(
           dataSource: <ChartSampleData>[

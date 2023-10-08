@@ -15,10 +15,6 @@ class MetalsModel {
   String cr;
   String hg;
   String zn;
-  String eleme;
-  String gokana;
-  String khana;
-  String tai;
 
   MetalsModel({
     required this.text,
@@ -28,10 +24,6 @@ class MetalsModel {
     required this.cr,
     required this.hg,
     required this.zn,
-    required this.eleme,
-    required this.gokana,
-    required this.khana,
-    required this.tai,
   });
 
   factory MetalsModel.fromJson(Map<String, dynamic> json) => MetalsModel(
@@ -42,9 +34,5 @@ class MetalsModel {
         cr: json["Cr"],
         hg: json["Hg"],
         zn: json["Zn"],
-        eleme: json["Eleme"],
-        gokana: json["Gokana"],
-        khana: json["Khana"],
-        tai: json["Tai"],
       );
 }
