@@ -12,84 +12,111 @@ class ArticleDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              onPressed: () {
-                Get.off(() => SearchScreen());
-              },
-              icon: const Icon(EvaIcons.search))
-        ],
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Socio-economic Baseline for lead impacted communities in Ogoniland',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-              ),
-              const SizedBox(height: 10),
-              Row(
-                children: [
-                  const CircleAvatar(
-                    radius: 12,
-                  ),
-                  const SizedBox(width: 8),
-                  const Text('Mr Fred Asuquo', style: TextStyle(fontSize: 12)),
-                  const SizedBox(width: 24),
-                  // const Spacer(),
-                  Text('Dec 5, 2001',
-                      style: TextStyle(fontSize: 10, color: greyColor)),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: 200,
-                // width: 80,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  image: const DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://res.cloudinary.com/iamvictorsam/image/upload/v1675709306/image_d27rcg.png'),
+    return SafeArea(
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(
+                  height: 30,
+                ),
+                const Center(
+                  child: Text(
+                    'ToxMet®',
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const Text(
-                'Abstract',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-              ),
-              Text(
-                'socio-economic Baseline for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
-                style: TextStyle(color: textGrey),
-              ),
-              const SizedBox(
-                height: 30,
-              ),
-              const Text(
-                'Abstract',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
-              ),
-              Text(
-                'socio-economic Baseline for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance socio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistancesocio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistancesocio-economic Baselin for lead impacted communities in Ogoniland Ogoniland did not necessarily play a prominent role in the transatlantic slave trade, and there is little evidence to suggest that Ogoni were enslaved. When the British entered Nigeria and imposed colonial rule in 1885, they left the Ogoni in relative isolation. Despite indigenous resistance',
-                style: TextStyle(color: textGrey),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-            ],
+                const Center(
+                  child: Text(
+                    'By',
+                    style: TextStyle(
+                      fontSize: 14,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 10),
+                buildAuthor(
+                    name: 'Prof. Kingsley Chukwuemeka Patrick-Iwuanyanwu'),
+                buildAuthor(name: 'Sam Neebee Victor'),
+                buildAuthor(name: 'Ikechi Fortune Kelechi'),
+
+                const SizedBox(
+                  height: 20,
+                ),
+                // Container(
+                //   height: 200,
+                //   // width: 80,
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(8),
+                //     image: const DecorationImage(
+                //       fit: BoxFit.cover,
+                //       image: NetworkImage(
+                //           'https://res.cloudinary.com/iamvictorsam/image/upload/v1675709306/image_d27rcg.png'),
+                //     ),
+                //   ),
+                // ),
+
+                // const Text(
+                //   'Abstract',
+                //   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                // ),
+                const Text(
+                  'ToxMet® Mobile Application: Prediction of Heavy Metals Concentration in Selected Impacted Communities of Ogoniland Using Machine Learning and Flutter.',
+                  style: TextStyle(color: Colors.black),
+                ),
+
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'Field of Innovation/Creativity',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+                const Text(
+                  'ToxMet® mobile application utilizes machine learning algorithms, geospatial mapping techniques, and data drawn from various research sources to detect and make informed predictions of heavy metals (Pb, Cd, Cr, Hg, Ni, Zn) pollution in soil and water within specific impacted Local Governments (Eleme, Tai, Gokana, Khana) of Rivers State, Nigeria.',
+                  style: TextStyle(color: Colors.black),
+                ),
+
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'Goal of the Innovation/Creativity',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+
+                const Text(
+                  'ToxMet® offers a novel, innovative, technology-driven approach to heavy metals pollution detection, and future predictions. providing accurate data on contamination hot spots. It also creates a visual awareness of affected communities in Ogoniland using collected data .',
+                  style: TextStyle(color: Colors.black),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  'Statement of the Innovation/Creativity',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                ),
+                const Text(
+                  'ToxMet® leverages Python programming and Snowflake data platform to process extensive data from research publications and online sources. The application\'s machine learning algorithms and geospatial mapping capabilities empower it to accurately predict contamination trends and identify potential hot spots. Flutter, a versatile mobile app development framework, plays a crucial role in visualizing this geospatial data and enhancing the user experience. It uses maps to display geographical locations, helping users visualize where the contamination trends are most prominent based on articles published in specific locations. Additionally, Flutter enables the application to show interactive chart readings of past, present, and future data, providing users with a comprehensive understanding of the environmental trends in Ogoniland. This integration of Flutter\'s capabilities transforms ToxMet® into a powerful and user-friendly collaborative platform, encouraging users to work together towards sustainable solutions.',
+                  style: TextStyle(color: Colors.black),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
+
+  Widget buildAuthor({String? image, name}) => Center(
+        child: Text(name,
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600)),
+      );
 }

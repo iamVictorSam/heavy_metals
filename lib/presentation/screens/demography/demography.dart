@@ -14,23 +14,43 @@ class DemographyScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Demography'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-        child: ListView.builder(
-          shrinkWrap: true,
-          itemCount: _homeController.metals.length,
-          itemBuilder: (BuildContext context, int index) => SfCircularChart(
-            title: ChartTitle(
-                text: _homeController.metals[index].text,
-                textStyle: const TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                )),
-            legend: const Legend(overflowMode: LegendItemOverflowMode.wrap),
-            series: _getRadiusPieSeries1(_homeController.metals[index]),
-            tooltipBehavior: TooltipBehavior(enable: true),
-          ),
-        ),
+      body: Obx(
+        () => _homeController.isLoading.value
+            ? const Center(
+                child: CircularProgressIndicator(),
+              )
+            : Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  itemCount: _homeController.metals.length,
+                  itemBuilder: (BuildContext context, int index) => SizedBox(
+                    // padding: const EdgeInsets.only(bottom: 30),
+                    height: Get.height * 0.6,
+                    width: Get.width,
+                    child: SfCircularChart(
+                      title: ChartTitle(
+                          text: _homeController.metals[index].text,
+                          textStyle: const TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          )),
+                      centerY: '50%',
+                      // margin: const EdgeInsets.symmetric(horizontal: 30),
+                      legend: const Legend(
+                          position: LegendPosition.bottom,
+                          isVisible: true,
+                          overflowMode: LegendItemOverflowMode.wrap),
+                      series:
+                          _getRadiusPieSeries1(_homeController.metals[index]),
+                      tooltipBehavior: TooltipBehavior(enable: true),
+                    ),
+                  ),
+                  separatorBuilder: (context, index) => SizedBox(
+                    height: Get.height * 0.3,
+                  ),
+                ),
+              ),
       ),
     );
   }
@@ -86,10 +106,9 @@ class DemographyScreen extends StatelessWidget {
         dataLabelMapper: (ChartSampleData data, _) => data.text,
         startAngle: 100,
         endAngle: 100,
-        pointRadiusMapper: (ChartSampleData data, _) => data.text,
         dataLabelSettings: const DataLabelSettings(
           isVisible: true,
-          labelPosition: ChartDataLabelPosition.outside,
+          labelPosition: ChartDataLabelPosition.inside,
         ),
       ),
     ];

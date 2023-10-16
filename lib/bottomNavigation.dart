@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:heavy_metals/constant.dart';
+import 'package:heavy_metals/presentation/screens/article_details/article_details.dart';
 import 'package:heavy_metals/presentation/screens/demography/demography.dart';
 import 'package:heavy_metals/presentation/screens/home.dart';
 
@@ -17,8 +18,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   static final List<Widget> _widgetOptions = <Widget>[
     const HomeScreen(),
     DemographyScreen(),
-    const Text('Profile Page',
-        style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold)),
+    ArticleDetails()
   ];
 
   void _onItemTapped(int index) {

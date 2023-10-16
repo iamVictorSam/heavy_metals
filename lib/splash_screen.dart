@@ -22,11 +22,11 @@ class _InitScreenState extends State<InitScreen> {
               padding: EdgeInsets.all(0.0),
               // child: Image.asset('assets/Travi Logo.jpg'),
               child: Text(
-                'H.M.A.A',
+                'ToxMet®',
                 style: TextStyle(
                     fontSize: 50,
                     fontWeight: FontWeight.w900,
-                    color: kPrimaryColor),
+                    color: Colors.blue),
               ),
             ),
           ),
