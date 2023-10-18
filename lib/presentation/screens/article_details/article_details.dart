@@ -1,6 +1,5 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 // ignore: must_be_immutable
 class ArticleDetails extends StatelessWidget {
