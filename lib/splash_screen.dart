@@ -20,7 +20,6 @@ class _InitScreenState extends State<InitScreen> {
             // flex: 2,
             child: Padding(
               padding: EdgeInsets.all(0.0),
-              // child: Image.asset('assets/Travi Logo.jpg'),
               child: Text(
                 'ToxMet®',
                 style: TextStyle(
