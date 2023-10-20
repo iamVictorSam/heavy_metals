@@ -17,7 +17,6 @@ class _InitScreenState extends State<InitScreen> {
     return AnimatedSplashScreen(
         splash: const SizedBox(
           child: Center(
-            // flex: 2,
             child: Padding(
               padding: EdgeInsets.all(0.0),
               child: Text(
