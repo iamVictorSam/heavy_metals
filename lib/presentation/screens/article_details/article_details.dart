@@ -17,7 +17,7 @@ class ArticleDetails extends StatelessWidget {
         actions: [
           IconButton(
               onPressed: () {
-                Get.off(() => const SearchScreen());
+                Get.off(() => SearchScreen());
               },
               icon: const Icon(EvaIcons.search))
         ],
