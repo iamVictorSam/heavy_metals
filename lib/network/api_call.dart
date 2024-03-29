@@ -1,11 +1,12 @@
 import 'dart:convert';
+
 import 'package:heavy_metals/models/model.dart';
 import 'package:http/http.dart' as http;
 
 class NetworkCall {
   Future<List<MetalsModel>> fetchMetalsData() async {
     final response =
-        await http.get(Uri.parse('https://toxmet.xyz/api/soil-test'));
+        await http.get(Uri.parse('https://toxmet.xyz/api/water-test'));
 
     if (response.statusCode == 200) {
       List<dynamic> data = json.decode(response.body);

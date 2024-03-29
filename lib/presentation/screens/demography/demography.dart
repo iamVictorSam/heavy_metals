@@ -30,7 +30,7 @@ class DemographyScreen extends StatelessWidget {
                     width: Get.width,
                     child: SfCircularChart(
                       title: ChartTitle(
-                          text: _homeController.metals[index].text,
+                          text: _homeController.metals[index].text ?? '',
                           textStyle: const TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -58,20 +58,20 @@ class DemographyScreen extends StatelessWidget {
   List<PieSeries<ChartSampleData, String>> _getRadiusPieSeries1(
       MetalsModel metal) {
     // Calculate the total for all metals at this location
-    double total = double.parse(metal.cd) +
-        double.parse(metal.pb) +
-        double.parse(metal.ni) +
-        double.parse(metal.hg) +
-        double.parse(metal.cr) +
-        double.parse(metal.zn);
+    double total = double.parse(metal.cd ?? '') +
+        double.parse(metal.pb ?? '') +
+        double.parse(metal.ni ?? '') +
+        double.parse(metal.hg ?? '') +
+        double.parse(metal.cr ?? '') +
+        double.parse(metal.zn ?? '');
 
     // Calculate the percentage for each metal
-    double cdPercentage = (double.parse(metal.cd) / total) * 100;
-    double pbPercentage = (double.parse(metal.pb) / total) * 100;
-    double niPercentage = (double.parse(metal.ni) / total) * 100;
-    double hgPercentage = (double.parse(metal.hg) / total) * 100;
-    double crPercentage = (double.parse(metal.cr) / total) * 100;
-    double znPercentage = (double.parse(metal.zn) / total) * 100;
+    double cdPercentage = (double.parse(metal.cd ?? '') / total) * 100;
+    double pbPercentage = (double.parse(metal.pb ?? '') / total) * 100;
+    double niPercentage = (double.parse(metal.ni ?? '') / total) * 100;
+    double hgPercentage = (double.parse(metal.hg ?? '') / total) * 100;
+    double crPercentage = (double.parse(metal.cr ?? '') / total) * 100;
+    double znPercentage = (double.parse(metal.zn ?? '') / total) * 100;
 
     return <PieSeries<ChartSampleData, String>>[
       PieSeries<ChartSampleData, String>(
@@ -116,20 +116,20 @@ class DemographyScreen extends StatelessWidget {
 
   List<PieSeries<ChartSampleData, String>> _getRadiusPieSeries(
       MetalsModel metal) {
-    double total = double.parse(metal.cd) +
-        double.parse(metal.pb) +
-        double.parse(metal.ni) +
-        double.parse(metal.hg) +
-        double.parse(metal.cr) +
-        double.parse(metal.zn);
+    double total = double.parse(metal.cd ?? '') +
+        double.parse(metal.pb ?? '') +
+        double.parse(metal.ni ?? '') +
+        double.parse(metal.hg ?? '') +
+        double.parse(metal.cr ?? '') +
+        double.parse(metal.zn ?? '');
 
-    // Calculate the percentage for each metal
-    double cdPercentage = (double.parse(metal.cd) / total) * 100;
-    double pbPercentage = (double.parse(metal.pb) / total) * 100;
-    double niPercentage = (double.parse(metal.ni) / total) * 100;
-    double hgPercentage = (double.parse(metal.hg) / total) * 100;
-    double crPercentage = (double.parse(metal.cr) / total) * 100;
-    double znPercentage = (double.parse(metal.zn) / total) * 100;
+    // Calculate the percentage for each metal?? ''
+    double cdPercentage = (double.parse(metal.cd ?? '') / total) * 100;
+    double pbPercentage = (double.parse(metal.pb ?? '') / total) * 100;
+    double niPercentage = (double.parse(metal.ni ?? '') / total) * 100;
+    double hgPercentage = (double.parse(metal.hg ?? '') / total) * 100;
+    double crPercentage = (double.parse(metal.cr ?? '') / total) * 100;
+    double znPercentage = (double.parse(metal.zn ?? '') / total) * 100;
 
     return <PieSeries<ChartSampleData, String>>[
       PieSeries<ChartSampleData, String>(

@@ -8,13 +8,13 @@ List<MetalsModel> metalsModelFromJson(String str) => List<MetalsModel>.from(
     json.decode(str).map((x) => MetalsModel.fromJson(x)));
 
 class MetalsModel {
-  String text;
-  String cd;
-  String pb;
-  String ni;
-  String cr;
-  String hg;
-  String zn;
+  String? text;
+  String? cd;
+  String? pb;
+  String? ni;
+  String? cr;
+  String? hg;
+  String? zn;
 
   MetalsModel({
     required this.text,
@@ -27,8 +27,8 @@ class MetalsModel {
   });
 
   factory MetalsModel.fromJson(Map<String, dynamic> json) => MetalsModel(
-        text: json["text"],
-        cd: json["Cd"],
+        text: json["text  "],
+        cd: json["3"],
         pb: json["Pb"],
         ni: json["Ni"],
         cr: json["Cr"],

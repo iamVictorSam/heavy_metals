@@ -18,65 +18,65 @@ class _HomeScreenState extends State<HomeScreen> {
   late final customMarkers = <Marker>[
     // tai
     buildPin(const LatLng(4.7518, 7.2437),
-        town: _homeController.metals[3].text,
-        cd: _homeController.metals[3].cd,
-        pb: _homeController.metals[3].pb,
-        ni: _homeController.metals[3].ni,
-        cr: _homeController.metals[3].cr,
-        hg: _homeController.metals[3].hg,
-        zn: _homeController.metals[3].zn),
+        town: _homeController.metals[3].text ?? "0",
+        cd: _homeController.metals[3].cd ?? "0",
+        pb: _homeController.metals[3].pb ?? '0',
+        ni: _homeController.metals[3].ni ?? '0',
+        cr: _homeController.metals[3].cr ?? '0',
+        hg: _homeController.metals[3].hg ?? '0',
+        zn: _homeController.metals[3].zn ?? '0'),
     // eleme
     buildPin(const LatLng(4.7994, 7.1198),
-        cd: _homeController.metals[0].cd,
-        town: _homeController.metals[0].text,
-        pb: _homeController.metals[0].pb,
-        ni: _homeController.metals[0].ni,
-        cr: _homeController.metals[0].cr,
-        hg: _homeController.metals[0].hg,
-        zn: _homeController.metals[0].zn),
+        cd: _homeController.metals[0].cd ?? '0',
+        town: _homeController.metals[0].text ?? '0',
+        pb: _homeController.metals[0].pb ?? '0',
+        ni: _homeController.metals[0].ni ?? '0',
+        cr: _homeController.metals[0].cr ?? '0',
+        hg: _homeController.metals[0].hg ?? '0',
+        zn: _homeController.metals[0].zn ?? '0'),
     // khana
     buildPin(const LatLng(4.6476, 7.3949),
-        town: _homeController.metals[2].text,
-        cd: _homeController.metals[2].cd,
-        pb: _homeController.metals[2].pb,
-        ni: _homeController.metals[2].ni,
-        cr: _homeController.metals[2].cr,
-        hg: _homeController.metals[2].hg,
-        zn: _homeController.metals[2].zn),
+        town: _homeController.metals[2].text ?? '0',
+        cd: _homeController.metals[2].cd ?? '0',
+        pb: _homeController.metals[2].pb ?? '0',
+        ni: _homeController.metals[2].ni ?? '0',
+        cr: _homeController.metals[2].cr ?? '0',
+        hg: _homeController.metals[2].hg ?? '0',
+        zn: _homeController.metals[2].zn ?? '0'),
     // gokana
     buildPin(const LatLng(4.6692, 7.2869),
-        cd: _homeController.metals[1].cd,
-        town: _homeController.metals[1].text,
-        pb: _homeController.metals[1].pb,
-        ni: _homeController.metals[1].ni,
-        cr: _homeController.metals[1].cr,
-        hg: _homeController.metals[1].hg,
-        zn: _homeController.metals[1].zn),
+        cd: _homeController.metals[1].cd ?? '0',
+        town: _homeController.metals[1].text ?? '0',
+        pb: _homeController.metals[1].pb ?? '0',
+        ni: _homeController.metals[1].ni ?? '0',
+        cr: _homeController.metals[1].cr ?? '0',
+        hg: _homeController.metals[1].hg ?? '0',
+        zn: _homeController.metals[1].zn ?? '0'),
   ];
 
   Marker buildPin(LatLng point,
-      {required String cd,
-      required String town,
-      required String pb,
-      required String ni,
-      required String hg,
-      required String cr,
-      required String zn}) {
+      {required String? cd,
+      required String? town,
+      required String? pb,
+      required String? ni,
+      required String? hg,
+      required String? cr,
+      required String? zn}) {
     // Calculate the total for all metals at this location
-    double total = double.parse(cd) +
-        double.parse(pb) +
-        double.parse(ni) +
-        double.parse(hg) +
-        double.parse(cr) +
-        double.parse(zn);
+    double total = double.parse(cd ?? '0') +
+        double.parse(pb ?? '0') +
+        double.parse(ni ?? '0') +
+        double.parse(hg ?? '0') +
+        double.parse(cr ?? '0') +
+        double.parse(zn ?? '0');
 
     // Calculate the percentage for each metal
-    double cdPercentage = (double.parse(cd) / total) * 100;
-    double pbPercentage = (double.parse(pb) / total) * 100;
-    double niPercentage = (double.parse(ni) / total) * 100;
-    double hgPercentage = (double.parse(hg) / total) * 100;
-    double crPercentage = (double.parse(cr) / total) * 100;
-    double znPercentage = (double.parse(zn) / total) * 100;
+    double cdPercentage = (double.parse(cd ?? '0') / total) * 100;
+    double pbPercentage = (double.parse(pb ?? '0') / total) * 100;
+    double niPercentage = (double.parse(ni ?? '0') / total) * 100;
+    double hgPercentage = (double.parse(hg ?? '0') / total) * 100;
+    double crPercentage = (double.parse(cr ?? '0') / total) * 100;
+    double znPercentage = (double.parse(zn ?? '0') / total) * 100;
 
     return Marker(
       point: point,
